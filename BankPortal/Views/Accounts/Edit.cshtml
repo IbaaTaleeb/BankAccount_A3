@@ -1,0 +1,22 @@
+﻿@model BankAccountAssignment.API.Modules.BankAccountModule.Model.BankAccount
+<link rel="stylesheet" type="text/css" href="~/css/Add.css">
+
+<h1>Edit Account Details</h1>
+
+<form asp-action="Edit" method="post" id="edit-account-form">
+    <input type="hidden" asp-for="Number" />
+
+    <div>
+        <label>Holder Name</label>
+        <input asp-for="HolderName" id="holderName" maxlength="35" title="Holder name must be 35 characters or less" required />
+    </div>
+
+    <div>
+        <label>Phone Number</label>
+        <input asp-for="AssociatedPhoneNumber" id="phoneNumber" pattern="^\d{1,13}$" maxlength="13" title="Phone number must be between 1 and 13 digits" required />
+    </div>
+
+    <button type="submit">Save Changes</button>
+</form>
+
+

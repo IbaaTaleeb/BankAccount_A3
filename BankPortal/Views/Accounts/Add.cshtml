@@ -1,0 +1,43 @@
+﻿@model BankAccountAssignment.API.Modules.BankAccountModule.Model.OpenAccountRequest
+
+
+@* Add the specific CSS file for this page *@
+<link rel="stylesheet" type="text/css" href="~/css/Add.css">
+
+<h2>Create a New Account</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    </div>
+}
+
+<form asp-action="Add" method="post">
+    <div>
+        <label asp-for="userId"></label>
+        <input asp-for="userId" />
+        <span asp-validation-for="userId"></span>
+    </div>
+    <div>
+        <label asp-for="HolderName"></label>
+        <input asp-for="HolderName" />
+        <span asp-validation-for="HolderName"></span>
+    </div>
+    <div>
+        <label asp-for="AssociatedPhoneNumber"></label>
+        <input asp-for="AssociatedPhoneNumber" />
+        <span asp-validation-for="AssociatedPhoneNumber"></span>
+    </div>
+    <div>
+        <label asp-for="DateOfBirth"></label>
+        <input asp-for="DateOfBirth" type="date" />
+        <span asp-validation-for="DateOfBirth"></span>
+    </div>
+    <div>
+        <label asp-for="CategoryName"></label>
+        <input asp-for="CategoryName" />
+        <span asp-validation-for="CategoryName"></span>
+    </div>
+    <button type="submit">Create Account</button>
+</form>

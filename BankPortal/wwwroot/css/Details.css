@@ -1,0 +1,181 @@
+﻿/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5; /* Soft light gray background */
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Title Style */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #34495e; /* Darker blue-gray for the title */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Pure white background */
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2c3e50; /* Dark blue-gray header */
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9; /* Light gray for table rows */
+}
+
+/* Table hover effect */
+tr:hover td {
+    background-color: #ecf0f1; /* Light hover effect */
+}
+
+/* Form Styling */
+.search-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+    .search-form label {
+        font-size: 1.1em;
+        color: #34495e;
+    }
+
+    .search-form input[type="text"] {
+        padding: 10px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        width: 250px;
+        max-width: 100%;
+        background-color: #ffffff;
+    }
+
+    .search-form button {
+        padding: 10px 20px;
+        background-color: #3498db; /* Soft blue */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+    }
+
+        .search-form button:hover {
+            background-color: #2980b9; /* Darker blue hover effect */
+        }
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .action-buttons a,
+    .action-buttons button {
+        width: 200px;
+        padding: 12px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1.1em;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .action-buttons a {
+        background-color: #3498db; /* Soft blue for Open New Account button */
+        color: #fff;
+    }
+
+        .action-buttons a:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+    .action-buttons button {
+        background-color: #e74c3c; /* Red for destructive actions like Delete */
+        color: #fff;
+        border: none;
+    }
+
+        .action-buttons button:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+
+/* Divider */
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Back to Account List Link */
+a.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2c3e50;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+    a.back-link:hover {
+        color: #2980b9;
+        text-decoration: underline;
+    }
+
+/* Alerts */
+.alert {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.alert-success {
+    background-color: #27ae60; /* Success: Subtle green */
+    color: #fff;
+}
+
+.alert-danger {
+    background-color: #e74c3c; /* Error: Red */
+    color: #fff;
+}
+
+.alert .close {
+    color: #fff;
+}
+
+/* Centered Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

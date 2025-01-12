@@ -1,0 +1,63 @@
+﻿@model BankAccountAssignment.API.Modules.BankAccountModule.Model.BankAccount
+<link rel="stylesheet" type="text/css" href="~/css/Details.css">
+
+@{
+    ViewData["Title"] = "Account Details";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    </div>
+}
+
+<h1>Account Details</h1>
+
+<table>
+    <tr>
+        <th>Account Number</th>
+        <td>@Model.Number</td>
+    </tr>
+    <tr>
+        <th>Holder Name</th>
+        <td>@Model.HolderName</td>
+    </tr>
+    <tr>
+        <th>Phone Number</th>
+        <td>@Model.AssociatedPhoneNumber</td>
+    </tr>
+    <tr>
+        <th>Balance</th>
+        <td>@Model.Balance</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td>@(Model.IsActive ? "Active" : "Inactive")</td>
+    </tr>
+    <tr>
+        <th>Creation Date</th>
+        <td>@Model.CreationDate</td>
+    </tr>
+</table>
+
+<hr />
+
+<!-- Action Buttons Centered -->
+<div class="action-buttons">
+    <!-- Edit Button with Icon -->
+    <a asp-action="Edit" asp-route-accountNumber="@Model.Number" class="btn-edit">
+        <i class="fas fa-edit"></i> Edit Account
+    </a>
+
+    <!-- Delete Button with Icon -->
+    <form method="post" asp-action="Delete" asp-route-accountNumber="@Model.Number" onsubmit="return confirm('Are you sure you want to delete this account?');">
+        <input type="hidden" name="_method" value="DELETE" />
+        <button type="submit" class="btn-delete">
+            <i class="fas fa-trash-alt"></i> Delete Account
+        </button>
+    </form>
+
+    <!-- Back to Account List -->
+    <a asp-action="Index" class="back-link"><i class="fas fa-arrow-left"></i> Back to Account List</a>
+</div>
