@@ -43,3 +43,19 @@ with two web portals that use the API.
 | DELETE | `/api/BankAccounts/DeleteAccount/{accountNumber}` |
 
 ## Project structure
+```
+BankAccountAssignment.API/   REST API (controllers, services, repository, JWT, migrations)
+WebBank/                     MVC portal for login
+BankPortal/                  MVC portal for account management
+```
+
+## Running locally
+
+1. Install the .NET 8 SDK and SQL Server.
+2. Set the `BankAccountDbConnectionString` connection string and the `JwtSettings` values in `BankAccountAssignment.API/appsettings.json`.
+3. Apply the migrations:
+   ```
+   cd BankAccountAssignment.API
+   dotnet ef database update
+   ```
+4. Run the API with `dotnet run`, then open `/swagger` in the browser to try the endpoints.
